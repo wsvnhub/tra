@@ -58,7 +58,7 @@ const App: React.FC = () => {
 
     // Validation: Check for length 9
     if (term.length !== 9) {
-        setInputError("Vui lòng nhập đúng 9 chữ số.");
+        setInputError("Vui lòng nhập đúng 9 chữ số SĐT mã, không gồm số 0.");
         setResults([]);
         return;
     }
@@ -82,7 +82,7 @@ const App: React.FC = () => {
             <Database size={32} />
           </div>
           <h1 className="text-3xl font-bold text-gray-900 tracking-tight">
-            Tra cứu lịch làm việc Ways Station
+            Tra cứu lịch làm việc Ways Station (đợi web load 10 giây)
           </h1>
         </div>
       </div>
@@ -113,7 +113,7 @@ const App: React.FC = () => {
                 ? 'border-red-300 focus:ring-red-500 focus:border-transparent' 
                 : 'border-gray-200 focus:ring-blue-500 focus:border-transparent'
             }`}
-            placeholder="Nhập mã số (9 chữ số)..."
+            placeholder="Đợi web load 10 giây rồi nhập đúng 9 chữ số SĐT mã nhân viên, không gồm số 0..."
             value={searchTerm}
             onChange={(e) => handleSearch(e.target.value)}
             disabled={sheetData.grid.length === 0}
