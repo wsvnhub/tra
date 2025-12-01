@@ -82,7 +82,7 @@ const App: React.FC = () => {
             <Database size={32} />
           </div>
           <h1 className="text-3xl font-bold text-gray-900 tracking-tight">
-            Tra cứu lịch làm việc Ways Station (đợi web load 10 giây)
+            Tra cứu lịch làm việc Ways Station (đợi web load 10 giây rồi mới nhập SĐT mã NV được)
           </h1>
         </div>
       </div>
@@ -113,7 +113,7 @@ const App: React.FC = () => {
                 ? 'border-red-300 focus:ring-red-500 focus:border-transparent' 
                 : 'border-gray-200 focus:ring-blue-500 focus:border-transparent'
             }`}
-            placeholder="Đợi web load 10 giây rồi nhập đúng 9 chữ số SĐT mã nhân viên, không gồm số 0..."
+            placeholder="Nhập 9 chữ số SĐT, ko gồm số 0"
             value={searchTerm}
             onChange={(e) => handleSearch(e.target.value)}
             disabled={sheetData.grid.length === 0}
